@@ -1,0 +1,29 @@
+# Simulation configuration
+device: "cuda"
+enable_rendering: true
+max_steps: 10000
+dt: 0.01
+render_interval: 1
+assets_root: "assets"
+
+renderer:
+  resolution: [512, 512]
+  samples_per_pixel: 64
+  enabled: true
+
+physics:
+  gravity: [0, -9.81, 0]
+  damping: 0.99
+  solver_iterations: 10
+  default_mass: 1.0
+  default_friction: 0.5
+  default_restitution: 0.5
+
+environment:
+  ground_plane_y: 0.0
+  gravity: [0, -9.81, 0]
+  
+logging:
+  log_frequency: 100
+  save_checkpoints: true
+  checkpoint_frequency: 1000

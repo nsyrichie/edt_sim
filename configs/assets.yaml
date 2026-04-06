@@ -1,0 +1,32 @@
+# Asset configuration
+assets_root: "assets"
+
+agents:
+  animenoid:
+    mesh_path: "processed/npz/animenoid.npz"
+    rig_path: "processed/npz/animenoid_rig.npz"
+    scale: 1.0
+    action_dim: 12
+    mass: 70.0
+    
+  quadruped:
+    mesh_path: "processed/npz/quadruped.npz"
+    rig_path: "processed/npz/quadruped_rig.npz"
+    scale: 0.5
+    action_dim: 8
+    mass: 30.0
+
+scenes:
+  default:
+    mesh_path: "processed/npz/default_scene.npz"
+    collision_enabled: true
+    
+  empty:
+    mesh_path: "processed/npz/empty_scene.npz"
+    collision_enabled: false
+
+preprocessing:
+  default_scale: 1.0
+  center_meshes: true
+  max_vertices: 10000
+  generate_collision: true

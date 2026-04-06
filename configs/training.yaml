@@ -1,0 +1,24 @@
+# Training configuration
+train:
+  batch_size: 32
+  learning_rate: 0.0003
+  gamma: 0.99
+  tau: 0.005
+  max_episode_length: 1000
+  num_episodes: 10000
+  
+model:
+  policy_hidden_dim: 256
+  value_hidden_dim: 256
+  num_layers: 2
+  
+checkpoint:
+  save_dir: "outputs/checkpoints"
+  load_from: ""
+  save_frequency: 100
+  
+logging:
+  log_dir: "outputs/logs"
+  tensorboard: true
+  wandb: false
+  wandb_project: "simulation-project"
